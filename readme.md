@@ -1,6 +1,6 @@
 # Links
 
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://frugosky.github.io/rock-paper-scissors/](https://frugosky.github.io/rock-paper-scissors/)
 
 ## Frontend Mentor - Rock, Paper, Scissors solution
 
@@ -8,7 +8,7 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Built with
 

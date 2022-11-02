@@ -19,9 +19,9 @@ let game = {
 	aiPick: Number(localStorage.getItem("aiPick")) || null,
 };
 const winningResultsMap = {
-	Rock: ["Scissors"],
-	Paper: ["Rock"],
-	Scissors: ["Paper"],
+	rock: ["scissors"],
+	paper: ["rock"],
+	scissors: ["paper"],
 };
 // CHANGE TO STEP 2/1
 const changeToStep2 = (e) => {
@@ -41,13 +41,13 @@ const removePickedClass = () => {
 		".options__button--pickByPlayerPosition"
 	);
 	playerBorderElement.classList.remove(
-		`options__button--background${game.playerPick}`
+		`options__button--background-${game.playerPick}`
 	);
 	const aiBorderElement = document.querySelector(
 		".options__button--pickByAiPosition"
 	);
 	aiBorderElement.classList.remove(
-		`options__button--background${game.aiPick}`
+		`options__button--background-${game.aiPick}`
 	);
 };
 const showScore = () => {
@@ -85,14 +85,14 @@ const setPlayerPick = (picked) => {
 	const playerBorderElement = document.querySelector(
 		".options__button--pickByPlayerPosition"
 	);
-	playerBorderElement.classList.add(`options__button--background${picked}`);
+	playerBorderElement.classList.add(`options__button--background-${picked}`);
 	const playerImgElement = document.querySelector(
 		".options__bigSizeButtonImg--player"
 	);
 	playerImgElement.setAttribute("src", `./images/icon-${picked}.svg`);
 };
 const setAiPick = () => {
-	const options = ["Rock", "Paper", "Scissors"];
+	const options = ["rock", "paper", "scissors"];
 	const picked = options[Math.floor(Math.random() * options.length)];
 	game = {
 		...game,
@@ -101,7 +101,7 @@ const setAiPick = () => {
 	const aiBorderElement = document.querySelector(
 		".options__button--pickByAiPosition"
 	);
-	aiBorderElement.classList.add(`options__button--background${picked}`);
+	aiBorderElement.classList.add(`options__button--background-${picked}`);
 	const aiImgElement = document.querySelector(
 		".options__bigSizeButtonImg--ai"
 	);

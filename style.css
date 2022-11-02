@@ -120,15 +120,15 @@ h2 {
 	/* padding: 4em; */
 	padding: 2em;
 }
-.options__button--trianglePositionRock {
+.options__button--trianglePosition-rock {
 	left: 50%;
 	top: 100%;
 }
-.options__button--trianglePositionPaper {
+.options__button--trianglePosition-paper {
 	left: 0%;
 	top: 0%;
 }
-.options__button--trianglePositionScissors {
+.options__button--trianglePosition-scissors {
 	left: 100%;
 	top: 0%;
 }
@@ -140,13 +140,13 @@ h2 {
 	left: 100%;
 	top: 50%;
 }
-.options__button--backgroundRock {
+.options__button--background-rock {
 	background: linear-gradient(var(--color-rock));
 }
-.options__button--backgroundPaper {
+.options__button--background-paper {
 	background: linear-gradient(var(--color-paper));
 }
-.options__button--backgroundScissors {
+.options__button--background-scissors {
 	background: linear-gradient(var(--color-scissors));
 }
 .resultTable {
