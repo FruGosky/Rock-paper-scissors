@@ -1,0 +1,252 @@
+/* ===BASE=== */
+:root {
+	--color-background: hsl(214, 47%, 23%), hsl(237, 49%, 15%);
+	--color-main: #fff;
+    --color-rock: hsl(349, 71%, 52%), hsl(349, 70%, 56%);
+    --color-paper: hsl(230, 89%, 62%), hsl(230, 89%, 65%);
+    --color-scissors: hsl(39, 89%, 49%), hsl(40, 84%, 53%);
+    --color-score-amount: hsl(229, 25%, 31%);
+    --color-score-title: hsl(229, 64%, 46%);
+    --color-border: hsl(217, 16%, 45%);
+    --color-footer: hsl(228, 45%, 44%);
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+.attribution {
+    position: absolute;
+    top: 98.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11px;
+    text-align: center;
+    width: 100%;
+}
+
+.attribution__a {
+    color: var(--color-footer);
+}
+
+body {
+	background: radial-gradient(at top, var(--color-background));
+	height: 100vh;
+	width: 100vw;
+	font-family: "Barlow Semi Condensed", sans-serif;
+	overflow: hidden;
+    padding: 3em;
+}
+
+main {
+    padding-top: 20vh;
+    max-width: 20vw;
+    min-width: 200px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 1rem;
+}
+/* ===BASE=== */
+
+.header {
+	padding: 1em 1.5em;
+	margin: 0 auto;
+	border-radius: 10px;
+	justify-content: space-between;
+	border: 3px solid var(--color-border);
+	max-width: 40vw;
+    max-height: 15vh;
+	min-width: 300px;
+    min-height: 125px;
+	display: flex;
+    align-items: center;
+}
+
+.header__span {
+	color: var(--color-main);
+	display: block;
+	line-height: 0.8em;
+}
+
+.header__score {
+    padding: 0.75em 5%;
+    background: var(--color-main);
+    border-radius: 0.5em;
+    text-align: center;
+}
+
+.header__span--scoreColor {
+    color: var(--color-score-title);
+}
+
+.header__points {
+    font-size: 3.5rem;
+    color: var(--color-score-amount);
+}
+
+.options {
+    aspect-ratio: 313 / 278;
+    background-size: cover;
+    position: relative;
+}
+
+.options--background {
+    background-image: url("./images/bg-triangle.svg");
+}
+
+.options__button {
+    border-radius: 50%;
+    border: none;
+    box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.15);
+    padding: 1em;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.options__button--choose {
+    cursor: pointer;
+}
+
+.options__smallSizeButtonImg {
+    aspect-ratio: 1 / 1;
+    width: 4em;
+}
+
+.options__bigSizeButtonImg {
+    aspect-ratio: 1 / 1;
+    /* width: 8em; */
+    width: 4em;
+}
+
+.options__buttonContainer {
+    display: block;
+    background-color: var(--color-main);
+    border-radius: 50%;
+    box-shadow: inset 0 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.options__buttonContainer--smallSize {
+    padding: 2em;
+}
+
+.options__buttonContainer--bigSize {
+    /* padding: 4em; */
+    padding: 2em;
+}
+
+.options__button--trianglePositionRock {
+    left: 50%;
+    top: 100%;
+}
+
+.options__button--trianglePositionPaper {
+    left: 0%;
+    top: 0%;
+}
+
+.options__button--trianglePositionScissors {
+    left: 100%;
+    top: 0%;
+}
+
+.options__button--pickByPlayerPosition {
+    left: 0%;
+    top: 50%;
+}
+
+.options__button--pickByAiPosition {
+    left: 100%;
+    top: 50%;
+}
+
+.options__button--backgroundRock {
+    background: linear-gradient(var(--color-rock));
+}
+
+.options__button--backgroundPaper {
+    background: linear-gradient(var(--color-paper));
+}
+
+.options__button--backgroundScissors {
+    background: linear-gradient(var(--color-scissors));
+}
+
+.resultTable {
+    position: absolute;
+    left: 50%;
+    /* top: 100%; */
+    top: 125%;
+    transform: translate(-50%,-50%);
+    color: var(--color-main);
+    width: 100px;
+    text-align: center;
+}
+
+.resultTable__title {
+    font-size: 1.5em;
+    text-shadow: 0 0 10px;
+}
+
+.resultTable__button {
+    margin-top: 1em;
+    padding: 1em;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.options__pickTitle {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: -30%;
+    left: 0%;
+    font-size: 1.5em;
+    color: var(--color-main);
+}
+
+.rules__container {
+    position: absolute;
+    top: 93vh;
+    left: 70vw;
+}
+
+.rules__openButton {
+    padding: 10% 50%;
+    border-radius: 0.5em;
+    border: 0.2em solid var(--color-border);
+    color: var(--color-main);
+    background: none;
+    cursor: pointer;
+}
+
+.rules__centerContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.rules__centerImage {
+    background-color: #fff;
+    padding: 4em 1.5em 1.5em 1.5em;
+    border-radius: 10%;
+    border: 5px solid var(--color-border);
+}
+
+.rules__closeButton {
+    position: absolute;
+    top: 5.5%;
+    left: 82.5%;
+    box-shadow: 0 0 2px;
+    padding: 2% 4%;
+    border: 1px solid var(--color-border);
+    border-radius: 25%;
+    cursor: pointer;
+}
