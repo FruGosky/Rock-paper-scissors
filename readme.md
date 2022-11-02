@@ -15,3 +15,5 @@ This is a solution to the [Rock, Paper, Scissors challenge on Frontend Mentor](h
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
+- BEM
+- EMMET (on VSC)
