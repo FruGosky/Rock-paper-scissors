@@ -1,93 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <!-- displays site properly based on user's device -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body>
-  <header class="header">
-    <section>
-      <h1>
-        <span class="header__span">ROCK</span>
-        <span class="header__span">PAPER</span>
-        <span class="header__span">SCISSORS</span>
-      </h1>
-    </section>
-    <section class="header__score">
-      <h2>
-        <span class="header__span header__span--scoreColor">SCORE</span>
-      </h2>
-      <strong class="header__points">12</strong>
-    </section>
-  </header>
-  <main>
-    <div class="step1">
-      <div class="options options--background">
-        <button data-pick="Paper" class="options__button options__button--backgroundPaper options__button--trianglePositionPaper options__button--choose">
-          <span class="options__buttonContainer options__buttonContainer--smallSize">
-            <img src="./images/icon-Paper.svg" alt="paper" class="options__smallSizeButtonImg" />
-          </span>
-        </button>
-        <button data-pick="Rock" class="options__button options__button--backgroundRock options__button--trianglePositionRock options__button--choose">
-          <span class="options__buttonContainer options__buttonContainer--smallSize">
-            <img src="./images/icon-Rock.svg" alt="rock" class="options__smallSizeButtonImg" />
-          </span>
-        </button>
-        <button data-pick="Scissors" class="options__button options__button--backgroundScissors options__button--trianglePositionScissors options__button--choose">
-          <span class="options__buttonContainer options__buttonContainer--smallSize">
-            <img src="./images/icon-Scissors.svg" alt="scissors" class="options__smallSizeButtonImg" />
-          </span>
-        </button>
-      </div>
-    </div>
-    <div class="step2" hidden>
-      <section class="options">
-        <div class="options__button options__button--pickByPlayerPosition">
-          <h3 class="options__pickTitle">Picked by Player</h3>
-          <div class="options__buttonContainer options__buttonContainer--bigSize">
-            <img src="./images/icon-Paper.svg" alt="paper" class="options__bigSizeButtonImg options__bigSizeButtonImg--player" />
-          </div>
-        </div>
-        <div class="options__button options__button--pickByAiPosition">
-        <h3 class="options__pickTitle">Picked by AI</h3>
-          <div class="options__buttonContainer options__buttonContainer--bigSize">
-            <img src="./images/icon-Scissors.svg" alt="scissors" class="options__bigSizeButtonImg options__bigSizeButtonImg--ai" />
-          </div>
-        </div>
-        <div class="resultTable">
-          <h4 class="resultTable__title">LOSE</h4>
-          <h5><button class="resultTable__button">PLAY AGAIN</button></h5>
-        </div>
-      </section>
-    </div>
-  </main>
-  <footer>
-    <div class="rules__container">
-      <button class="rules__openButton">
-        <span>RULES</span>
-      </button>
-    </div>
-  </footer>
-  <div class="rules">
-  </div>
-  <div class="attribution">
-    <span class="attribution__span">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" class="attribution__a">Frontend
-        Mentor</a>.
-      Coded by <a href="#" class="attribution__a">FruGosky</a>.
-    </span>
-  </div>
-  <script src="app.js"></script>
-</body>
-
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Frontend Mentor | Rock, Paper, Scissors</title>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<header class="header">
+			<section>
+				<h1>
+					<span class="header__span">ROCK</span>
+					<span class="header__span">PAPER</span>
+					<span class="header__span">SCISSORS</span>
+				</h1>
+			</section>
+			<section class="header__score">
+				<h2>
+					<span class="header__span header__span--scoreColor"
+						>SCORE</span
+					>
+				</h2>
+				<strong class="header__points">12</strong>
+			</section>
+		</header>
+		<main>
+			<div class="step1">
+				<div class="options options--background">
+					<button
+						data-pick="Paper"
+						class="options__button options__button--backgroundPaper options__button--trianglePositionPaper options__button--choose"
+					>
+						<span
+							class="options__buttonContainer options__buttonContainer--smallSize"
+						>
+							<img
+								src="./images/icon-Paper.svg"
+								alt="paper"
+								class="options__smallSizeButtonImg"
+							/>
+						</span>
+					</button>
+					<button
+						data-pick="Rock"
+						class="options__button options__button--backgroundRock options__button--trianglePositionRock options__button--choose"
+					>
+						<span
+							class="options__buttonContainer options__buttonContainer--smallSize"
+						>
+							<img
+								src="./images/icon-Rock.svg"
+								alt="rock"
+								class="options__smallSizeButtonImg"
+							/>
+						</span>
+					</button>
+					<button
+						data-pick="Scissors"
+						class="options__button options__button--backgroundScissors options__button--trianglePositionScissors options__button--choose"
+					>
+						<span
+							class="options__buttonContainer options__buttonContainer--smallSize"
+						>
+							<img
+								src="./images/icon-Scissors.svg"
+								alt="scissors"
+								class="options__smallSizeButtonImg"
+							/>
+						</span>
+					</button>
+				</div>
+			</div>
+			<div class="step2" hidden>
+				<section class="options">
+					<div
+						class="options__button options__button--pickByPlayerPosition"
+					>
+						<h3 class="options__pickTitle">Picked by Player</h3>
+						<div
+							class="options__buttonContainer options__buttonContainer--bigSize"
+						>
+							<img
+								src="./images/icon-Paper.svg"
+								alt="paper"
+								class="options__bigSizeButtonImg options__bigSizeButtonImg--player"
+							/>
+						</div>
+					</div>
+					<div
+						class="options__button options__button--pickByAiPosition"
+					>
+						<h3 class="options__pickTitle">Picked by AI</h3>
+						<div
+							class="options__buttonContainer options__buttonContainer--bigSize"
+						>
+							<img
+								src="./images/icon-Scissors.svg"
+								alt="scissors"
+								class="options__bigSizeButtonImg options__bigSizeButtonImg--ai"
+							/>
+						</div>
+					</div>
+					<div class="resultTable">
+						<h4 class="resultTable__title">LOSE</h4>
+						<h5>
+							<button class="resultTable__button">
+								PLAY AGAIN
+							</button>
+						</h5>
+					</div>
+				</section>
+			</div>
+		</main>
+		<footer>
+			<div class="rules__container">
+				<button class="rules__openButton">
+					<span>RULES</span>
+				</button>
+			</div>
+		</footer>
+		<div class="rules"></div>
+		<div class="attribution">
+			<span class="attribution__span">
+				Challenge by
+				<a
+					href="https://www.frontendmentor.io/challenges/rock-paper-scissors-game-pTgwgvgH"
+					target="_blank"
+					class="attribution__a"
+					>Frontend Mentor</a
+				>. Coded by
+				<a href="https://github.com/FruGosky" class="attribution__a"
+					>FruGosky</a
+				>.
+			</span>
+		</div>
+		<script src="app.js"></script>
+	</body>
 </html>
