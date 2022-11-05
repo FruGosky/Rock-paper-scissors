@@ -1,6 +1,6 @@
 # Links
 
-- Live Site URL: [https://frugosky.github.io/Rock-paper-scissors/](https://frugosky.github.io/rock-paper-scissors/)
+- Live Site URL: [https://frugosky.github.io/Rock-paper-scissors/](https://frugosky.github.io/Rock-paper-scissors/)
 
 ## Frontend Mentor - Rock, Paper, Scissors solution
 
